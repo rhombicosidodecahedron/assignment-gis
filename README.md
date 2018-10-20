@@ -20,8 +20,8 @@ Build a map-based application, which lets the user see geo-based data on a map a
 
 Fill in (either in English, or in Slovak):
 
-**Application description**: `<fill in>`
+**Application description**: Zobrazenie nehod chodcov a cyklistov, vaznosti nehody, navrhnovanie alternativnych tras
 
-**Data source**: `<fill in>`
+**Data source**: [DATA.GOV](https://catalog.data.gov/dataset/bicycle-crashes, https://catalog.data.gov/dataset/pedestrian-crashes)
 
-**Technologies used**: `<fill in>`
+**Technologies used**: HTML + Javascript + PHP
