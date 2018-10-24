@@ -20,7 +20,7 @@ Build a map-based application, which lets the user see geo-based data on a map a
 
 Fill in (either in English, or in Slovak):
 
-**Application description**: Zobrazenie nehod chodcov a cyklistov, vaznosti nehody, navrhnovanie alternativnych tras pre vybrane mesto
+**Application description**: Zobrazenie nehod chodcov a cyklistov pre vybrane mesto, heatmapa, filtrovanie nehod podla roznych kriterii (smrtelne, zrazka s autom/chodcom), navrhovanie alternativnych tras
 
 **Data source**: [Nehody cyklisti](https://catalog.data.gov/dataset/bicycle-crashes), [Nehody chodci](https://catalog.data.gov/dataset/pedestrian-crashes)
 
