@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Zadanie-PDT</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700'>
+    <link rel='stylesheet' type="text/css" href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css'/>
+    <link rel='stylesheet' type="text/css" href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' />
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  </head>
+  <body>
+    <div id="mySidemenu" class="sidemenu">
+      <a href="javascript:void(0)" class="close" onclick="closeSM()">&times;</a>
+      <div class="sm-wrapper">
+        <div style=" margin-left: 20px;">
+          <h1 href="#">Filter</h1>
+          <h2 href="#">Injury</h2>
+          <select id="injury-filter" name="injur" class="selectpicker" multiple></select>
+          <button class="btn" onclick="updateFilter(document.getElementsByTagName('select'))">Select</button>
+          <h2 href="#">Weather</h2>
+          <select id="weather-filter" name="weather" class="selectpicker" multiple></select>
+          <button class="btn" onclick="updateFilter(document.getElementsByTagName('select'))">Select</button>
+          <h2 href="#">Month</h2>
+          <div class="row">
+            <div class="col-sm-9">
+              <div class="form-group">
+          <select id="month-filter" name="crash_mont" class="selectpicker form-control" multiple>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </div>
+      </div>
+    
+          <button class="btn" onclick="updateFilter(document.getElementsByTagName('select'))">Select</button>
+        </div>
+          <!-- <h1 href="#">Alcohol</h1> -->
+         <!--  <h1 href="#">Age</h1> -->
+         <br />
+         <br />
+         <br />
+         <h2 href="#">Accident near Traffic Light</h2>
+         <button class="btn" onclick="getTrafficLightCrashs()">Show</button>
+         <button class="btn" onclick="setDefaultView()">Hide</button>
+         <h2 href="#">Neighborhoods colored by number of Accident</h2>
+         <button class="btn" onclick="showNeighborhoodPolygon()">Show</button>
+         <button class="btn" onclick="setDefaultView()">Hide</button>
+         <h2 href="#">Hospital distance circles</h2>
+         <button class="btn" onclick="showHopitalPolygon()">Show</button>
+         <button class="btn" onclick="setDefaultView()">Hide</button>
+         <h2 href="#">Bike lines colored by number of Accident</h2>
+         <button class="btn" onclick="showBikeLines()">Show</button>
+         <button class="btn" onclick="setDefaultView()">Hide</button>
+        </div>
+      </div>
+    </div>
+    <div id="pg-content">
+      <div id="burger" style="font-size:50px;cursor:pointer;color:#3887be" onclick="openSM()">&#9776;</div>
+    </div>
+    <nav id="menu"></nav>
+    <nav id='filter-group' class='filter-group'></nav>
+    <div id='map' class='map pad2'></div>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
+    <!-- <div id='map' class='map pad2'></div> -->
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
